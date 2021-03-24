@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id= "result"></div>
+	<script type="text/javascript">
+		var num = {};
+		num.all = [];
+		num.prime = [];
+		num.isprime = function(number)
+		{
+			for(var i = 2; i < number; i++){
+				if(number%i === 0)
+				{
+					return false;
+				}
+
+			}
+			return true;
+		}
+		num.addall = function(max_num){
+			for(var i = 2; i <= max_num; i++)
+			{
+				this.all.push(i);
+			}
+		}
+		num.addprime = function(){
+			for(var i = 0; i <= this.all.length; i++)
+			{	
+				var n =this.all[i];
+				if(this.isprime(n))
+				{
+					this.prime.push(n);
+				}
+			}
+		}
+		num.printprime = function(){
+			for(var i = 0; i < this.prime.length; i++)
+			{
+				document.write(this.prime[i]+"<br>");
+			}
+		}
+
+		num.addall(10000);
+		num.addprime();
+		num.printprime();
+
+
+	</script>
+</body>
+</html>
