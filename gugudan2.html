@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var gugudan = {};
+		gugudan.addlow = function(x){
+			for(var i = 1; i < 10; i++)
+			{
+				var ret = [];
+				ret[i] = x * i;
+			}
+			return ret;
+		}
+		gugudan.printResult = function(x, ret){
+			document.write("<h2>" + x + "단</h2>");
+			for(var i = 1; i < 10; i++)
+			{
+				var y = x * i;
+				document.write(x +" X "+ i + " = " + y + "<br>");
+			}
+		}
+
+
+		gugudan.main = function(){
+				for(var n = 2; n < 10; n++){
+				var result = this.addlow(n);
+				this.printResult(n,result);
+			}
+		}
+		gugudan.main();
+
+		/*function gugudan(x){
+			var ret = [];
+			for(var i = 1; i < 10; i++)
+			{
+				ret[i] = x * i;
+			}
+			return ret;
+		}
+
+		function printResult(x, ret){
+			document.write("<h2>" + x + "단</h2>");
+			for(var i = 1; i < 10; i++)
+			{
+				var y = x * i;
+				document.write(x +" X "+ i + " = " + y + "<br>");
+			}
+		}
+		
+		function main(){
+				for(var n = 2; n < 10; n++){
+				var result = gugudan(n);
+				printResult(n,result);
+			}
+		}
+		main();*/
+	</script>
+
+</body>
+</html>
