@@ -6,8 +6,8 @@
 <body>
 	<script type="text/javascript">
 		var str = prompt("몇단 몇열까지 입력할까요?");
-		var x; 
-		var y;
+		var x ;
+		var y; 
 		var num = [];
 		function find(){
 			for(var i = 1; i < 10; i++)
@@ -28,10 +28,10 @@
 			}
 		}
 		find();
-		for(var i = 2; i <= num[0]; i++)
+		for(var i = 1; i <= num[0]; i++)
 		{
 			document.write("<h2>"+i+"단</h2>")
-			for(var j = 2; j <= num[1]; j++)
+			for(var j = 1; j <= num[1]; j++)
 			{
 				document.write(i+" X "+j+" = " +i*j+"<br>");
 			}
